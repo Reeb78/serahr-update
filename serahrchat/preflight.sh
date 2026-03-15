@@ -343,6 +343,15 @@ echo ""
 if [ "$DO_INSTALL" = true ]; then
   # --install flag was passed, skip the question
   do_install="j"
+elif [ ! -t 0 ]; then
+  # Piped via curl | bash — no interactive input available, auto-install
+  echo -e "${CYAN}${BOLD}--- SerahrChat Installation ---${NC}"
+  echo ""
+  echo "  SerahrChat ist eine KI-gestützte FAQ-Appliance für Ihre Website."
+  echo "  Nach der Installation läuft das System 7 Tage kostenlos als Testversion."
+  echo ""
+  TRIAL_MODE=true
+  do_install="j"
 else
   echo -e "${CYAN}${BOLD}--- SerahrChat Installation ---${NC}"
   echo ""
