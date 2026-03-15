@@ -1,6 +1,6 @@
 {
-  "latest_version": "0.1.11",
-  "update_type": "bugfix",
-  "changelog": "Custom maintenance page during updates, improved health polling",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.11"
+  "latest_version": "0.2.0",
+  "update_type": "feature",
+  "changelog": "Simplified update UX, lifetime licence hint, maintenance page during updates",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.0"
 }
