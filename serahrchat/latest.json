@@ -1,6 +1,6 @@
 {
-  "latest_version": "0.1.10",
+  "latest_version": "0.1.11",
   "update_type": "bugfix",
-  "changelog": "Update flow UX: spinner, progress indicator, auto-reload after update",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.10"
+  "changelog": "Custom maintenance page during updates, improved health polling",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.11"
 }
