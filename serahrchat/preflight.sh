@@ -528,7 +528,7 @@ SERVER_IP=$(hostname -I 2>/dev/null | awk '{print $1}' || echo "SERVER_IP")
 HEALTH_OK=false
 echo -n "       Warte auf Systemstart"
 for i in $(seq 1 45); do
-  if curl -fsSL --connect-timeout 2 "http://127.0.0.1/health" 2>/dev/null | grep -q '"status"'; then
+  if curl -fsSL --connect-timeout 2 "http://127.0.0.1/health" 2>/dev/null | grep -q 'ok'; then
     HEALTH_OK=true
     diag "Health check passed (attempt $i)"
     break

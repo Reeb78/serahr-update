@@ -1,6 +1,6 @@
 {
-  "latest_version": "0.1.7",
+  "latest_version": "0.1.8",
   "update_type": "bugfix",
-  "changelog": "Dark mode fixes, citation-based analytics, upgrade credit, badge/translation fixes",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.7"
+  "changelog": "i18n plan names, OCR hint, badge styling, budget explainer, checkout popup fix, dark mode fresh install fix",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.8"
 }
