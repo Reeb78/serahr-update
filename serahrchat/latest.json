@@ -1,6 +1,6 @@
 {
-  "latest_version": "0.1.8",
+  "latest_version": "0.1.9",
   "update_type": "bugfix",
-  "changelog": "i18n plan names, OCR hint, badge styling, budget explainer, checkout popup fix, dark mode fresh install fix",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.8"
+  "changelog": "Dark mode fresh install fix, badge colors, checkout debug logging, preflight health check fix",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.9"
 }
