@@ -1,6 +1,6 @@
 {
-  "latest_version": "0.1.6",
+  "latest_version": "0.1.7",
   "update_type": "bugfix",
-  "changelog": "",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.6"
+  "changelog": "Dark mode fixes, citation-based analytics, upgrade credit, badge/translation fixes",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.1.7"
 }
