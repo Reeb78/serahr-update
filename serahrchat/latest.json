@@ -1,8 +1,8 @@
 {
   "latest_version": "0.2.2",
-  "update_type": "security",
-  "changelog": "Fake security update zum Testen der UI",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.1",
-  "image_digest": "sha256:6b2c8d40926b7b4cf4819af3aa441f240b5e7bb5ebb7b5b13b59774ebca12aaa",
-  "signature": "qzCeZXQT2VyZ+Zuag4ZqGcPEiETgGloBtn+fDCHKVFUQY9fBE4FgmrK1u+WwbEJGwnEg1lhSZ0Dku42sJTC4AQ=="
+  "update_type": "bugfix",
+  "changelog": "Header cleanup: Logout + Sprachauswahl neu angeordnet",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.2",
+  "image_digest": "PENDING",
+  "signature": "I6A/IqXn1PhLoVxb8hH5mvULGkQ+Gv08FjLoc2s4uji9E0MME+JDVUe8wSCMKSiaozRWbrXSBsnrRlSzgckQCQ=="
 }
