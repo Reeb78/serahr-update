@@ -1,6 +1,8 @@
 {
   "latest_version": "0.2.1",
   "update_type": "security",
-  "changelog": "",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.1"
+  "changelog": "JWT token revocation + Ed25519 manifest signing",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.1",
+  "image_digest": "sha256:6b2c8d40926b7b4cf4819af3aa441f240b5e7bb5ebb7b5b13b59774ebca12aaa",
+  "signature": "0Ka0S3r5At8qSaMXa/WpCc5TxCUHIdQAqo4Bj7l+e/54RMIffDBHeYeRkwBWo8oZt3J22RcS4mYIcJ/ViN6UCA=="
 }
