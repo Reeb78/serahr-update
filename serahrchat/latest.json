@@ -1,7 +1,8 @@
 {
   "latest_version": "0.2.3",
   "update_type": "bugfix",
-  "changelog": "",
+  "changelog": "Header cleanup, update readiness check, faster Docker builds",
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.3",
-  "image_digest": "sha256:a0d31ba70148afa1d9a8004ce4eb7267669789e76cb045bc3c8d162a1806effd"
+  "image_digest": "sha256:a0d31ba70148afa1d9a8004ce4eb7267669789e76cb045bc3c8d162a1806effd",
+  "signature": "964rx/0g8JVs+XR3Y7GWVNUH8IkiZSCiF2ywUQNsjFeJhUS0IFaCLucnNk6nhSX/JyjIVzxc99LrxU9GvrHtDA=="
 }
