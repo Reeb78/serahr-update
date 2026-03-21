@@ -1,8 +1,9 @@
 {
-  "latest_version": "0.2.3",
-  "update_type": "bugfix",
-  "changelog": "Header cleanup, update readiness check, faster Docker builds",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.3",
-  "image_digest": "sha256:a0d31ba70148afa1d9a8004ce4eb7267669789e76cb045bc3c8d162a1806effd",
-  "signature": "964rx/0g8JVs+XR3Y7GWVNUH8IkiZSCiF2ywUQNsjFeJhUS0IFaCLucnNk6nhSX/JyjIVzxc99LrxU9GvrHtDA=="
+  "latest_version": "0.2.4",
+  "update_type": "feature",
+  "changelog": "B2B/VAT notice in pricing, legal consent for updates",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.4",
+  "image_digest": "sha256:27c90e5e31c0246e11695f51136085b7faf070e7904e2d2ffa3c4784f24b4267",
+  "legal_changes": {"agb":{"from":"1.0","to":"1.1","url":"https://serahr.de/de/agb/chat"}},
+  "signature": "8w7cSePssHxA8m8WPKWJScbD9vrVAOjhdZvDjiOaoDtKfdCAQvObOXR8BfqyPTjNfe300BTv+AYiZeE9JLALCw=="
 }
