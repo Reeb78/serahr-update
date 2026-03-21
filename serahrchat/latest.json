@@ -6,7 +6,7 @@
     "en": "Test: Legal consent banner for updates"
   },
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.6",
-  "image_digest": "sha256:9b0db6ec7ca25ae8f9336d10430dd4bae17398b68965e9262620b1fe11d7b4ba",
+  "image_digest": "sha256:e71837928ae0caa70228f23c3dbe107e6317dd08c536faebd75509002b0b92d2",
   "legal_changes": {
     "agb": {
       "from": "1.0",
@@ -14,5 +14,5 @@
       "url": "https://serahr.de/de/agb/chat"
     }
   },
-  "signature": "BL7jEmTTJoBOr9EIIAXBfZTVRex8ZxheZ1EQ7qEj0gHOWb599E44ouOh+6xY1W13vGfw/0LWNZo5NNNMiUMJCw=="
+  "signature": "CaI/EMYHjRbQY0fallTztkMRhb6xG+6Ucnn6DOSMvTp0pFGx1Bx5BBFlm1Q52lfh+swkRIYexKPKTM4disOFCg=="
 }
