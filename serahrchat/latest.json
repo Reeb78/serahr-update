@@ -1,9 +1,18 @@
 {
   "latest_version": "0.2.5",
   "update_type": "feature",
-  "changelog": "Test: Legal consent banner",
+  "changelog": {
+    "de": "B2B/MwSt.-Hinweis im Pricing, AGB-Consent bei Updates, zweisprachiger Changelog",
+    "en": "B2B/VAT notice in pricing, legal consent for updates, bilingual changelog"
+  },
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.5",
-  "image_digest": "sha256:27c90e5e31c0246e11695f51136085b7faf070e7904e2d2ffa3c4784f24b4267",
-  "legal_changes": {"agb":{"from":"1.0","to":"1.1","url":"https://serahr.de/de/agb/chat"}},
-  "signature": "bMSNS4XWgpYbSndXWVrN+icXcVbpj0Hq1voN/V3J9AtcilPvXLk04sYdDKVqvvIoThRkgYRXfRZ5iom6K+FgCA=="
+  "image_digest": "sha256:1db312cee34becddc98eea58d28132af28745a5ec31cb68f3f022c4ebb82f7de",
+  "legal_changes": {
+    "agb": {
+      "from": "1.0",
+      "to": "1.1",
+      "url": "https://serahr.de/de/agb/chat"
+    }
+  },
+  "signature": "V3s/AweFozsVhM7E4b1y4TtwDcH2SWikiVVr72QXgyjApf3vkaV9JzFDgJKWv1AANUzMSXKeIqCeSz2hVdGWAw=="
 }
