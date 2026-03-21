@@ -6,7 +6,7 @@
     "en": "B2B/VAT notice in pricing, legal consent for updates, bilingual changelog"
   },
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.5",
-  "image_digest": "sha256:1db312cee34becddc98eea58d28132af28745a5ec31cb68f3f022c4ebb82f7de",
+  "image_digest": "sha256:9b0db6ec7ca25ae8f9336d10430dd4bae17398b68965e9262620b1fe11d7b4ba",
   "legal_changes": {
     "agb": {
       "from": "1.0",
@@ -14,5 +14,5 @@
       "url": "https://serahr.de/de/agb/chat"
     }
   },
-  "signature": "V3s/AweFozsVhM7E4b1y4TtwDcH2SWikiVVr72QXgyjApf3vkaV9JzFDgJKWv1AANUzMSXKeIqCeSz2hVdGWAw=="
+  "signature": "FUQsQv+DKS5bXnsPTl0rm3voqXhDGH3/jliYagouqF3eCqWshYnbtd+08Z5ur5jhHt+GccsPnVJ51KaAO8t2Cw=="
 }
