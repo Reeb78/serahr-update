@@ -1,11 +1,7 @@
 {
-  "latest_version": "0.2.5",
-  "update_type": "feature",
-  "changelog": {
-    "de": "B2B/MwSt.-Hinweis, AGB-Consent bei Updates und Login, zweisprachiger Changelog",
-    "en": "B2B/VAT notice, AGB consent for updates and login, bilingual changelog"
-  },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.5",
-  "image_digest": "sha256:39110b748f8ccb60f4c06744d7f70d0488bc6a6e5e4fdcc5894cc9a50bfda10d",
-  "signature": "EJGgZ9YPHQNoxJP1wLvTdKU4O2mmjXPIO5np0yF3BLIQfRluzTXKlvFZiCN6Ctl/xa+phkHV0fFwhavVFcIMAw=="
+  "latest_version": "0.2.6",
+  "update_type": "bugfix",
+  "changelog": "",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.2.6",
+  "image_digest": "sha256:45e05468ab1ed2f9753cc1a4f443bf5452bcc8747ba5b0ce2161741ca561a698"
 }
