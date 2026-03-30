@@ -3,6 +3,6 @@
   "update_type": "feature",
   "changelog": "Final-Test fixes, DSGVO mode, RAG streaming, error tracking, frontend upgrades",
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.0",
-  "image_digest": "sha256:16dfd0608f6afd574518aafa37efb69430bb8d079dcbbff6d562ad881fc06d62",
-  "signature": "KxcLm900v9pvcQ0MRf5jrDkNkALH823Z5l08PjSNPUw4yP+AeczgX/u0wdu0+CP9PJjAAZvVRxAcVJ+8WO0wDw=="
+  "image_digest": "sha256:9792245a6dc11aa52c19c08858e1c6411da5e27b068641f1c129634b4f0132a5",
+  "signature": "PjQAt4+IAvns1On3Krh7g46XX7al/fxktxueUADpHxvpHgIZC4noFvSbs4dqxCB2/A/dozGR+tj4wFJGbMA9BQ=="
 }
