@@ -66,6 +66,21 @@ fi
 
 echo "Signature: ${SIGNATURE:0:20}..."
 
+# Verify signature before writing (catch signing errors early)
+PUB_KEY="${REPO_DIR}/keys/manifest-signing.pub"
+if [ -f "$PUB_KEY" ]; then
+  echo -n "$CANONICAL" > /tmp/_manifest_verify.bin
+  echo "$SIGNATURE" | base64 -d > /tmp/_manifest_verify.sig
+  if openssl pkeyutl -verify -pubin -inkey "$PUB_KEY" -in /tmp/_manifest_verify.bin -sigfile /tmp/_manifest_verify.sig 2>/dev/null; then
+    echo "Signature verified OK"
+  else
+    echo "ERROR: Signature verification FAILED — aborting!"
+    rm -f /tmp/_manifest_verify.bin /tmp/_manifest_verify.sig
+    exit 1
+  fi
+  rm -f /tmp/_manifest_verify.bin /tmp/_manifest_verify.sig
+fi
+
 # Write signed manifest (human-readable format)
 cat > "$MANIFEST" <<EOF
 {
