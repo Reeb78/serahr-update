@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.5",
+  "latest_version": "0.3.6",
   "update_type": "bugfix",
-  "changelog": "Cache-Control Headers, Dashboard Auto-Update-Check, Update-UI Fix",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.5",
-  "image_digest": "sha256:0b8dc4672be460124e95856a6067888b387db7c3532115eccf9dea0a9e4f4162",
-  "signature": "hG8JsKGDeB80YAUPfW2D5dxmC0rqU4YEohFyze0VrRSqvXr5WFqOF2bifkQmwPHsH/VN3erVYymNZnoeTDQsCA=="
+  "changelog": "CLAUDE.md /ship Pflicht-Regel, Pre-Push Hook, Update-UI Fixes",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.6",
+  "image_digest": "sha256:36c273d1efc7bcfe82f3cc89c3ec4924bb32235354ab93dce110897a2af8f8db",
+  "signature": "wGAXbSagNriewx1Gs10N0e0N8K0cNrdW+1r7BXEzNDgJfQPALwjD1VXJSHlGM1gAeno5mjc0LZIaJ4XBPF4nCg=="
 }
