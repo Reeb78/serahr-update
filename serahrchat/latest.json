@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.3",
+  "latest_version": "0.3.4",
   "update_type": "bugfix",
-  "changelog": "CI-Manifest-Job entfernt, signierte Updates nur noch via /ship",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.3",
-  "image_digest": "sha256:d8a8a13bcdcfb419de68264518e3894c13b48bda5689706777aca32ac14245a0",
-  "signature": "tM8dHJVVMlraX9flJW+x9JKx/H/hdHiiTuDewfYm7MRITiROtP9jpu8iIE2UevHLhZC7thFZRsc1NPntlfoQCA=="
+  "changelog": "Cache-Control Headers fuer Admin-UI, verhindert stale Bundle nach Updates",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.4",
+  "image_digest": "sha256:b4d08b97a7252c5971a2238ccfa6ffaa05509a97ccc17e8db314c588674769e0",
+  "signature": "X6nngd9tjV5pkQqjBfmGAPt7BYqLikr6RlCsUJ0cYKtZDmYoCHVNCbpoZr4v5mPcvsgOo+9TsWgC8m/VDlHGAw=="
 }
