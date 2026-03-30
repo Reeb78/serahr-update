@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.6",
+  "latest_version": "0.3.7",
   "update_type": "bugfix",
-  "changelog": "CLAUDE.md /ship Pflicht-Regel, Pre-Push Hook, Update-UI Fixes",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.6",
-  "image_digest": "sha256:36c273d1efc7bcfe82f3cc89c3ec4924bb32235354ab93dce110897a2af8f8db",
-  "signature": "wGAXbSagNriewx1Gs10N0e0N8K0cNrdW+1r7BXEzNDgJfQPALwjD1VXJSHlGM1gAeno5mjc0LZIaJ4XBPF4nCg=="
+  "changelog": "bfcache-Fix, Cache-Control Meta-Tags, verhindert stale Bundles nach Auto-Logout",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.7",
+  "image_digest": "sha256:48fd9901c5ad42a79bc291a72cf157c77ad5f8761f1bfedb2c9ed1231026b77f",
+  "signature": "i0Mccm2EcXKm0xugPqUXunNkBKtIf66y4OaB26HCUrKXoxuXydgRXZGLy+U78lqGxWMMilSLSmGzuk/KkBoECw=="
 }
