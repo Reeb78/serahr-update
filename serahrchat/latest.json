@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.7",
+  "latest_version": "0.3.8",
   "update_type": "bugfix",
-  "changelog": "bfcache-Fix, Cache-Control Meta-Tags, verhindert stale Bundles nach Auto-Logout",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.7",
-  "image_digest": "sha256:48fd9901c5ad42a79bc291a72cf157c77ad5f8761f1bfedb2c9ed1231026b77f",
-  "signature": "i0Mccm2EcXKm0xugPqUXunNkBKtIf66y4OaB26HCUrKXoxuXydgRXZGLy+U78lqGxWMMilSLSmGzuk/KkBoECw=="
+  "changelog": "Test-Release fuer Dashboard-Update-Hinweis",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.8",
+  "image_digest": "sha256:609181a9fdd9b4c0fb0616e9ef0381c8833ee91c056fec1ed0741e716149fd41",
+  "signature": "uCp0rKCje8ZHiFPm9hAa1KuZJogakd2kPCl48hLZ9zIB+nfQBBDYkUaeB7XYQdJIh1x9h8ltbWJsnHUHThU1AQ=="
 }
