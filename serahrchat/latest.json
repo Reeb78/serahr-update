@@ -1,7 +1,8 @@
 {
   "latest_version": "0.3.2",
-  "update_type": "feature",
-  "changelog": "",
+  "update_type": "bugfix",
+  "changelog": "Diagnose: Trial als aktiv erkennen, Labels korrigiert, Release-Tooling",
   "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.2",
-  "image_digest": "sha256:d2123ed23681402f39e9c5d7287249d4424e4158539dcf659505437ae9f594f6"
+  "image_digest": "sha256:d2123ed23681402f39e9c5d7287249d4424e4158539dcf659505437ae9f594f6",
+  "signature": "FXlcZDYeB+2EHOG7gBBSz4SlfsFBBRNSsdn7QQ0gpplzlaqvg/mG9PZ0wa5pTkQrphBYli472s3+1QIu6AMWDA=="
 }
