@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.9",
-  "update_type": "bugfix",
-  "changelog": "Doku-Link im Header, Missed-Topics Normalisierung, Dashboard Spacing Fix",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.9",
-  "image_digest": "sha256:90897dd58ac5366b64990f8c8942964112b97f9f1dc55a4877fe11795535e49a",
-  "signature": "Fp7of236N3nDrTXSbLxzaRPIgQEfnDXxArfRRZ3whwRoVA3PNr5PkOV5pMc5ZVMF7pzpXjjvbRjGwFwygthlBw=="
+  "latest_version": "0.3.10",
+  "update_type": "feature",
+  "changelog": "Auto-Install Bugfixes, Security-Prioritaet, AGB v1.2 Klausel",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.10",
+  "image_digest": "sha256:dda0d9103588d8cc9ea7fe7e2849668cbc26785acc6f831e3fb46a02411ac3b7",
+  "signature": "/5KuIhGRDlcVS4qgsC98TVeNebmXdj4jOA/j84ETdNzru3Dfw8BApy5Kwt2uiENtTE1ok9DQH757P5T2AX6kBQ=="
 }
