@@ -1,8 +1,8 @@
 {
-  "latest_version": "0.3.10",
+  "latest_version": "0.3.11",
   "update_type": "feature",
-  "changelog": "Auto-Install Bugfixes, Security-Prioritaet, AGB v1.2 Klausel",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.10",
-  "image_digest": "sha256:dda0d9103588d8cc9ea7fe7e2849668cbc26785acc6f831e3fb46a02411ac3b7",
-  "signature": "/5KuIhGRDlcVS4qgsC98TVeNebmXdj4jOA/j84ETdNzru3Dfw8BApy5Kwt2uiENtTE1ok9DQH757P5T2AX6kBQ=="
+  "changelog": "AGB consent change-type differentiation (material vs editorial), page reload on accept, TOC for STATUS.md",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.11",
+  "image_digest": "sha256:dac05084790e0e7a15f1b65b7432fdd8ed0cbc4b097f0f9dd25eb01f02e7526f",
+  "signature": "bCuJh+WBoW13Y9R6xPpCTwZEcRO22DnHr53sVRFtiSWnP8mWGCo47Gj/5ncTvixqkNKXu2+7MDMh3va9sXHLCA=="
 }
