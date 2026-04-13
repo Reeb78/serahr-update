@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.12",
+  "latest_version": "0.3.13",
   "update_type": "feature",
   "changelog": {
-    "de": "LM Studio Support, eigener Embedding-Schritt im Setup, DSGVO: lokale Provider erlaubt, Qwen3 Thinking-Mode, AGB-Checkbox im Setup, Vite Security-Fix, OpenSSL CVE-Fix",
-    "en": "LM Studio support, separate embedding setup step, GDPR: local providers always compliant, Qwen3 thinking mode, AGB checkbox in setup, Vite security fix, OpenSSL CVE fix"
+    "de": "Auto-Reindex bei Embedding-Wechsel, interaktives HTTPS-Setup mit DNS-Pruefung, Audit-Logging fuer Updates, lokale Modelle UX-Verbesserungen, Qwen3 Thinking-Mode Fix, Dokumentation-Label im Header",
+    "en": "Auto-reindex on embedding change, interactive HTTPS setup with DNS validation, audit logging for updates, local model UX improvements, Qwen3 thinking mode fix, documentation label in header"
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.12",
-  "image_digest": "sha256:e42a6170afb9f19ef1cb01e055184a13aa70493957a4e7e610596479668d16fd",
-  "signature": "+STSrcmezgojxL0AQt3qElVv7/AohRsi2/I1KHX3cC+C5lTvmCrijftN7grJ6VYB6vV8uFElMR+/MyfN1LzfAw=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.13",
+  "image_digest": "sha256:0bf965c82424241fcd6767d35ae10006009d9d48800787b95c46d3e51983c32f",
+  "signature": "pGHNbuZ7GfNhfrqZVxOxbigdxfYmI7Yht1hwC6/1MfHe6pwRBq+Q7N6jylzeJUOs+o3LxRAatNCDYdRH8fOSBQ=="
 }
