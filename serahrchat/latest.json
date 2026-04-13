@@ -1,8 +1,11 @@
 {
-  "latest_version": "0.3.11",
+  "latest_version": "0.3.12",
   "update_type": "feature",
-  "changelog": "AGB consent change-type differentiation (material vs editorial), page reload on accept, TOC for STATUS.md",
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.11",
-  "image_digest": "sha256:dac05084790e0e7a15f1b65b7432fdd8ed0cbc4b097f0f9dd25eb01f02e7526f",
-  "signature": "bCuJh+WBoW13Y9R6xPpCTwZEcRO22DnHr53sVRFtiSWnP8mWGCo47Gj/5ncTvixqkNKXu2+7MDMh3va9sXHLCA=="
+  "changelog": {
+    "de": "LM Studio Support, eigener Embedding-Schritt im Setup, DSGVO: lokale Provider erlaubt, Qwen3 Thinking-Mode, AGB-Checkbox im Setup, Vite Security-Fix, OpenSSL CVE-Fix",
+    "en": "LM Studio support, separate embedding setup step, GDPR: local providers always compliant, Qwen3 thinking mode, AGB checkbox in setup, Vite security fix, OpenSSL CVE fix"
+  },
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.12",
+  "image_digest": "sha256:e42a6170afb9f19ef1cb01e055184a13aa70493957a4e7e610596479668d16fd",
+  "signature": "+STSrcmezgojxL0AQt3qElVv7/AohRsi2/I1KHX3cC+C5lTvmCrijftN7grJ6VYB6vV8uFElMR+/MyfN1LzfAw=="
 }
