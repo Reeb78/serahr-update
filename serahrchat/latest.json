@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.14",
-  "update_type": "feature",
+  "latest_version": "0.3.15",
+  "update_type": "bugfix",
   "changelog": {
-    "de": "Dashboard Chat-Test auch bei abgelaufener Lizenz, Modellliste aktualisiert nach Provider-Wechsel, Aktuell-Badge beim Embedding-Modell",
-    "en": "Dashboard chat test with expired license, model list refresh after provider change, current badge for embedding model"
+    "de": "Modell-Cache wird bei Provider-Wechsel geleert, automatischer Reindex bei Provider-Wechsel (auch ohne Modellnamen-Aenderung), Bot-Test Hinweis ohne Lizenz, Lizenz-Schreibweise konsistent",
+    "en": "Clear model cache on provider change, auto-reindex on provider change (even without model name change), bot test license-free hint, consistent licence spelling"
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.14",
-  "image_digest": "sha256:879f4fb6fcdeb566ec3b20d8debacd3b27ad3948b8c7f6707cfbe1c3b43365a6",
-  "signature": "SUvCNWzk4X63E+iqgFyot6OfPjR54SZb2E531CplV49DT+ooH0bUMr4X56uRFHnCku7MYfs/8UaykwenV5AZAw=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.15",
+  "image_digest": "sha256:a6b9c44e374f247c2611d9b5526a74afb62addeaeae97c6a2cad65743c4359b9",
+  "signature": "WXMmYEGuaDYykmeovAh9lQ4cA7ELHt+n63VKjz0b6KEJd8+3wuehK+IUm4clbJpgXA/9wYRqfb0uxII7X2K3Bw=="
 }
