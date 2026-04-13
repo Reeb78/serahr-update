@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.13",
+  "latest_version": "0.3.14",
   "update_type": "feature",
   "changelog": {
-    "de": "Auto-Reindex bei Embedding-Wechsel, interaktives HTTPS-Setup mit DNS-Pruefung, Audit-Logging fuer Updates, lokale Modelle UX-Verbesserungen, Qwen3 Thinking-Mode Fix, Dokumentation-Label im Header",
-    "en": "Auto-reindex on embedding change, interactive HTTPS setup with DNS validation, audit logging for updates, local model UX improvements, Qwen3 thinking mode fix, documentation label in header"
+    "de": "Dashboard Chat-Test auch bei abgelaufener Lizenz, Modellliste aktualisiert nach Provider-Wechsel, Aktuell-Badge beim Embedding-Modell",
+    "en": "Dashboard chat test with expired license, model list refresh after provider change, current badge for embedding model"
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.13",
-  "image_digest": "sha256:0bf965c82424241fcd6767d35ae10006009d9d48800787b95c46d3e51983c32f",
-  "signature": "pGHNbuZ7GfNhfrqZVxOxbigdxfYmI7Yht1hwC6/1MfHe6pwRBq+Q7N6jylzeJUOs+o3LxRAatNCDYdRH8fOSBQ=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.14",
+  "image_digest": "sha256:879f4fb6fcdeb566ec3b20d8debacd3b27ad3948b8c7f6707cfbe1c3b43365a6",
+  "signature": "SUvCNWzk4X63E+iqgFyot6OfPjR54SZb2E531CplV49DT+ooH0bUMr4X56uRFHnCku7MYfs/8UaykwenV5AZAw=="
 }
