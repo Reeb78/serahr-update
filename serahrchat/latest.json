@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.15",
+  "latest_version": "0.3.16",
   "update_type": "bugfix",
   "changelog": {
-    "de": "Modell-Cache wird bei Provider-Wechsel geleert, automatischer Reindex bei Provider-Wechsel (auch ohne Modellnamen-Aenderung), Bot-Test Hinweis ohne Lizenz, Lizenz-Schreibweise konsistent",
-    "en": "Clear model cache on provider change, auto-reindex on provider change (even without model name change), bot test license-free hint, consistent licence spelling"
+    "de": "Chat-Endpoint mit Per-IP Rate-Limit (60/min) gegen Cost-Runaway. Memory-effiziente LRU-Eviction bei hohem Traffic. Test-Fix fuer deterministische CI.",
+    "en": "Chat endpoint with per-IP rate limit (60/min) against cost runaway. Memory-efficient LRU eviction under high traffic. Test fix for deterministic CI."
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.15",
-  "image_digest": "sha256:a6b9c44e374f247c2611d9b5526a74afb62addeaeae97c6a2cad65743c4359b9",
-  "signature": "WXMmYEGuaDYykmeovAh9lQ4cA7ELHt+n63VKjz0b6KEJd8+3wuehK+IUm4clbJpgXA/9wYRqfb0uxII7X2K3Bw=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.16",
+  "image_digest": "sha256:c55a45324aee2ccfdaf980e2eaf2dc423b4cbe294e6d50379364a706096bce68",
+  "signature": "rbsNRRYZSwp4JGPruwG/ylYBEyeffxBW5ec7bvsskfxlqy4nGdj+/NNYuaQTJc1Ulcz1rGi1ZlU5NZJ3kj0kAA=="
 }
