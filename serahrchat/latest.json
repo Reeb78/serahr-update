@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.16",
-  "update_type": "bugfix",
+  "latest_version": "0.3.17",
+  "update_type": "security",
   "changelog": {
-    "de": "Chat-Endpoint mit Per-IP Rate-Limit (60/min) gegen Cost-Runaway. Memory-effiziente LRU-Eviction bei hohem Traffic. Test-Fix fuer deterministische CI.",
-    "en": "Chat endpoint with per-IP rate limit (60/min) against cost runaway. Memory-efficient LRU eviction under high traffic. Test fix for deterministic CI."
+    "de": "Sicherheit: api_base_url gegen Cloud-Metadata-SSRF gehärtet (SEC-006). Widget: KI-Kennzeichnung verschärft (Art. 50 KI-VO) — Badge „KI-Assistent“ plus nicht-entfernbarer KI-Hinweis im ersten Bot-Satz. Test-Stabilität in CI.",
+    "en": "Security: api_base_url hardened against cloud-metadata SSRF (SEC-006). Widget: clearer AI labelling (Art. 50 AI Act) — “AI assistant” badge plus non-removable AI notice in the first bot message. CI test stability."
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.16",
-  "image_digest": "sha256:c55a45324aee2ccfdaf980e2eaf2dc423b4cbe294e6d50379364a706096bce68",
-  "signature": "rbsNRRYZSwp4JGPruwG/ylYBEyeffxBW5ec7bvsskfxlqy4nGdj+/NNYuaQTJc1Ulcz1rGi1ZlU5NZJ3kj0kAA=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.17",
+  "image_digest": "sha256:175714aece97e991a616ef2b040175c2003f579d8acdd8bbbb6c70f04326a26b",
+  "signature": "KPDOdYzA/YtwvLNwSRV8dSVbPHzaGfpCuNQpggzlAXcskjv0c5FdmMJ7tYf2+lKAP0h+zOTYG7MkyQppfSKtBQ=="
 }
