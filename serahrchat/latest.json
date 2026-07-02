@@ -1,11 +1,11 @@
 {
-  "latest_version": "0.3.17",
-  "update_type": "security",
+  "latest_version": "0.3.18",
+  "update_type": "bugfix",
   "changelog": {
-    "de": "Sicherheit: api_base_url gegen Cloud-Metadata-SSRF gehärtet (SEC-006). Widget: KI-Kennzeichnung verschärft (Art. 50 KI-VO) — Badge „KI-Assistent“ plus nicht-entfernbarer KI-Hinweis im ersten Bot-Satz. Test-Stabilität in CI.",
-    "en": "Security: api_base_url hardened against cloud-metadata SSRF (SEC-006). Widget: clearer AI labelling (Art. 50 AI Act) — “AI assistant” badge plus non-removable AI notice in the first bot message. CI test stability."
+    "de": "Behebt einen Fehler bei der HTTPS-Einrichtung, durch den der Webserver nach dem TLS-Setup nicht startete. Die Erreichbarkeitsprüfung für OpenRouter wurde korrigiert. Die Installation richtet nun automatische Sicherheitsupdates ein und startet direkt als 7-Tage-Testversion. Kleinere Bereinigung der Webserver-Konfiguration.",
+    "en": "Fixes an issue where the web server failed to start after TLS setup. Corrects the OpenRouter reachability check. The installer now enables automatic OS security updates and starts directly in a 7-day trial. Minor web-server config cleanup."
   },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.17",
-  "image_digest": "sha256:175714aece97e991a616ef2b040175c2003f579d8acdd8bbbb6c70f04326a26b",
-  "signature": "KPDOdYzA/YtwvLNwSRV8dSVbPHzaGfpCuNQpggzlAXcskjv0c5FdmMJ7tYf2+lKAP0h+zOTYG7MkyQppfSKtBQ=="
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.18",
+  "image_digest": "sha256:47cb5c41dfb05822868ffd8674c48f989a88ece0949bc88982c8fd68279afb81",
+  "signature": "+pA2Gf0bnQNraLA+1SA3XSqP4viJz5wLpfAMFiAGhpApN6tea8cabixAWtaeY/6bLjMbrqf88LXbLThkd8DHDg=="
 }

@@ -19,7 +19,7 @@ MIN_RAM_MB=1800
 MIN_DISK_MB=1000
 MIN_DOCKER_MAJOR=20
 REQUIRED_PORTS=(80 443)
-OUTBOUND_TEST_HOST="api.openrouter.ai"
+OUTBOUND_TEST_HOST="openrouter.ai"
 OUTBOUND_TEST_PORT=443
 DOCKER_IMAGE="ghcr.io/reeb78/serahrchat"
 INSTALL_TOKEN_URL="https://licence.serahr.de/api/v1/install-token"
@@ -398,6 +398,33 @@ else
 fi
 step_end 0
 
+# --- OS-Sicherheitsupdates automatisieren (unattended-upgrades) ---
+# Ein frischer Server hat oft viele offene Security-Patches; ohne dies würde das
+# OS nie automatisch gepatcht (die App-Updates laufen separat über Watchtower).
+# Platziert VOR dem Container-Start: etwaige Dienst-Neustarts durchs Patchen sind
+# hier harmlos, weil unsere Container noch nicht laufen. Streng nicht-interaktiv
+# (kein needrestart-Vollbild), best effort mit Timeout.
+step_start "os_autopatch"
+echo "[+] Richte automatische Sicherheitsupdates ein..."
+if command -v apt-get >/dev/null 2>&1; then
+  export DEBIAN_FRONTEND=noninteractive
+  export NEEDRESTART_MODE=a
+  apt-get update -qq >>"$DIAG_LOG" 2>&1 || true
+  apt-get install -y -qq unattended-upgrades >>"$DIAG_LOG" 2>&1 || true
+  cat > /etc/apt/apt.conf.d/20auto-upgrades <<'AUTOUPG'
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+AUTOUPG
+  systemctl enable --now unattended-upgrades >>"$DIAG_LOG" 2>&1 || true
+  # Einmalig sofort anwenden, damit der frische Server gepatcht startet.
+  timeout 300 unattended-upgrade >>"$DIAG_LOG" 2>&1 || true
+  diag "unattended-upgrades enabled + ran once"
+else
+  echo "       (kein apt erkannt — OS-Autopatch nur auf Debian/Ubuntu)"
+  diag "os_autopatch skipped (no apt)"
+fi
+step_end 0
+
 # --- 2/8: Create directories ---
 step_start "create_directories"
 echo "[2/8] Erstelle Verzeichnisse..."
@@ -456,31 +483,19 @@ step_end 0
 # --- 5/8: Create .env (includes license key input) ---
 echo "[5/8] Erstelle Konfiguration..."
 
-# License key handling — track user input time separately
+# License key handling — Installation ist IMMER Trial (kein interaktiver Prompt).
+# Lizenzschlüssel gibt es erst NACH dem Stripe-Kauf (per Mail); zum Installations-
+# zeitpunkt hat kein Neukunde einen. Das Abo wird später im Admin-Bereich aktiviert.
+# Für Automatisierung/Edge-Cases kann ein Key optional per Umgebungsvariable
+# LICENSE_KEY vorgegeben werden.
 LICENSE_KEY_VALUE=""
-if [ "$TRIAL_MODE" = true ]; then
-  echo "       Testmodus: 7 Tage kostenlos, kein Lizenzschlüssel nötig."
-  diag "License: trial mode"
+if [ "$TRIAL_MODE" != true ] && [ -n "${LICENSE_KEY:-}" ]; then
+  LICENSE_KEY_VALUE="$LICENSE_KEY"
+  echo "       Lizenzschlüssel aus Umgebungsvariable übernommen."
+  diag "License: from env var"
 else
-  if [ -n "${LICENSE_KEY:-}" ]; then
-    LICENSE_KEY_VALUE="$LICENSE_KEY"
-    echo "       Lizenzschlüssel aus Umgebungsvariable übernommen."
-    diag "License: from env var"
-  else
-    step_start "license_input" "user_input"
-    echo ""
-    echo "  Haben Sie bereits einen Lizenzschlüssel?"
-    echo "  (Ohne Schlüssel startet eine 7-Tage-Testversion)"
-    echo ""
-    read -p "  Lizenzschlüssel eingeben (oder Enter für Testversion): " LICENSE_KEY_VALUE
-    step_end 0
-    if [ -z "$LICENSE_KEY_VALUE" ]; then
-      echo "       Testmodus: 7 Tage kostenlos."
-      diag "License: user chose trial"
-    else
-      diag "License: key provided (${LICENSE_KEY_VALUE:0:8}...)"
-    fi
-  fi
+  echo "       Testmodus: 7 Tage kostenlos — Lizenz später im Admin-Bereich."
+  diag "License: trial mode"
 fi
 
 step_start "create_config"
@@ -583,6 +598,89 @@ if [ "$INSTALL_START_TS" -gt 0 ]; then
   echo ""
 fi
 
-echo "  Für TLS/HTTPS-Einrichtung und weitere Konfiguration:"
-echo "  https://docs.serahr.de/serahrchat/installation"
+# =============================================================================
+# TLS/HTTPS Setup (interactive)
+# =============================================================================
+echo -e "${CYAN}${BOLD}=== HTTPS-Einrichtung ===${NC}"
+echo ""
+echo "  Ihr Chatbot ist aktuell unter http://${SERVER_IP} erreichbar."
+echo "  Für den Produktivbetrieb wird HTTPS dringend empfohlen."
+echo ""
+echo "  [1] HTTPS einrichten (Let's Encrypt — kostenlos)"
+echo "  [2] Überspringen (eigener Reverse Proxy / später einrichten)"
+echo ""
+read -r -p "  Ihre Wahl [1/2]: " TLS_CHOICE
+
+if [ "$TLS_CHOICE" = "1" ]; then
+  echo ""
+  echo -e "  ${YELLOW}Voraussetzung: Ihr DNS-Eintrag (A-Record) muss bereits auf die IP"
+  echo -e "  dieses Servers zeigen (${SERVER_IP}).${NC}"
+  echo ""
+  read -r -p "  Domain (z.B. chat.meinefirma.de): " TLS_DOMAIN
+  read -r -p "  E-Mail (für Let's Encrypt): " TLS_EMAIL
+
+  if [ -z "$TLS_DOMAIN" ] || [ -z "$TLS_EMAIL" ]; then
+    echo -e "  ${RED}Domain und E-Mail sind erforderlich. HTTPS-Setup übersprungen.${NC}"
+  else
+    # DNS validation loop: check if domain resolves to this server
+    MAX_DNS_RETRIES=12
+    DNS_RETRY_INTERVAL=300  # 5 minutes
+    DNS_OK=false
+
+    for attempt in $(seq 1 $MAX_DNS_RETRIES); do
+      RESOLVED_IP=$(dig +short "$TLS_DOMAIN" A 2>/dev/null | tail -1)
+      if [ "$RESOLVED_IP" = "$SERVER_IP" ]; then
+        DNS_OK=true
+        break
+      fi
+
+      if [ "$attempt" -eq 1 ]; then
+        echo ""
+        if [ -n "$RESOLVED_IP" ]; then
+          echo -e "  ${YELLOW}DNS-Ergebnis: $TLS_DOMAIN → $RESOLVED_IP (erwartet: $SERVER_IP)${NC}"
+        else
+          echo -e "  ${YELLOW}DNS-Ergebnis: $TLS_DOMAIN ist noch nicht auflösbar.${NC}"
+        fi
+        echo "  DNS-Propagation kann einige Minuten dauern."
+        echo ""
+        read -r -p "  Warten und automatisch wiederholen? [j/n]: " DNS_WAIT
+        if [ "$DNS_WAIT" != "j" ] && [ "$DNS_WAIT" != "J" ] && [ "$DNS_WAIT" != "y" ]; then
+          echo "  HTTPS-Setup übersprungen. Später manuell einrichten:"
+          echo "  sudo $INSTALL_DIR/scripts/setup-tls.sh $TLS_DOMAIN $TLS_EMAIL"
+          DNS_OK=false
+          break
+        fi
+      fi
+
+      REMAINING=$(( (MAX_DNS_RETRIES - attempt) * DNS_RETRY_INTERVAL / 60 ))
+      echo -e "  [Versuch $attempt/$MAX_DNS_RETRIES] DNS noch nicht korrekt. Nächster Check in 5 Minuten (max. ${REMAINING} Min. verbleibend)..."
+      sleep $DNS_RETRY_INTERVAL
+    done
+
+    if $DNS_OK; then
+      echo -e "  ${GREEN}✓ DNS korrekt: $TLS_DOMAIN → $SERVER_IP${NC}"
+      echo ""
+      echo "  Starte HTTPS-Einrichtung..."
+      if bash "$INSTALL_DIR/scripts/setup-tls.sh" "$TLS_DOMAIN" "$TLS_EMAIL"; then
+        echo ""
+        echo -e "  ${GREEN}${BOLD}✓ HTTPS erfolgreich eingerichtet!${NC}"
+        echo "  Admin UI: https://$TLS_DOMAIN/admin/ui/"
+      else
+        echo ""
+        echo -e "  ${RED}HTTPS-Einrichtung fehlgeschlagen. Später manuell einrichten:${NC}"
+        echo "  sudo $INSTALL_DIR/scripts/setup-tls.sh $TLS_DOMAIN $TLS_EMAIL"
+      fi
+    elif [ "$DNS_WAIT" = "j" ] || [ "$DNS_WAIT" = "J" ] || [ "$DNS_WAIT" = "y" ]; then
+      echo ""
+      echo -e "  ${RED}DNS nach $((MAX_DNS_RETRIES * DNS_RETRY_INTERVAL / 60)) Minuten nicht korrekt.${NC}"
+      echo "  Bitte prüfen Sie Ihren DNS-Eintrag und führen Sie dann aus:"
+      echo "  sudo $INSTALL_DIR/scripts/setup-tls.sh $TLS_DOMAIN $TLS_EMAIL"
+    fi
+  fi
+else
+  echo ""
+  echo "  HTTPS-Setup übersprungen."
+  echo "  Später manuell einrichten: sudo $INSTALL_DIR/scripts/setup-tls.sh <domain> <email>"
+fi
+
 echo ""
