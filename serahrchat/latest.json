@@ -1,11 +1,8 @@
 {
-  "latest_version": "0.3.18",
-  "update_type": "bugfix",
-  "changelog": {
-    "de": "Behebt einen Fehler bei der HTTPS-Einrichtung, durch den der Webserver nach dem TLS-Setup nicht startete. Die Erreichbarkeitsprüfung für OpenRouter wurde korrigiert. Die Installation richtet nun automatische Sicherheitsupdates ein und startet direkt als 7-Tage-Testversion. Kleinere Bereinigung der Webserver-Konfiguration.",
-    "en": "Fixes an issue where the web server failed to start after TLS setup. Corrects the OpenRouter reachability check. The installer now enables automatic OS security updates and starts directly in a 7-day trial. Minor web-server config cleanup."
-  },
-  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.18",
-  "image_digest": "sha256:47cb5c41dfb05822868ffd8674c48f989a88ece0949bc88982c8fd68279afb81",
-  "signature": "+pA2Gf0bnQNraLA+1SA3XSqP4viJz5wLpfAMFiAGhpApN6tea8cabixAWtaeY/6bLjMbrqf88LXbLThkd8DHDg=="
+  "latest_version": "0.3.19",
+  "update_type": "security",
+  "changelog": "Sicherheits- und Wartungsupdate: Build-Abhängigkeiten (vite, postcss) gegen bekannte Schwachstellen aktualisiert. KI-Chat-Antworten werden nun maschinenlesbar als KI-generiert gekennzeichnet (Art. 50 KI-VO).",
+  "update_url": "https://github.com/Reeb78/SerahrChat/releases/tag/v0.3.19",
+  "image_digest": "sha256:e17a2516de479c8f09f093948bbf2ea85e8d5b259d5d72b14f67f0c8a263b34d",
+  "signature": "ZoctYovvErCRoNG7gUWjQEpvYAxvZqOrifCPPtl4aYiagOxSP0zXCbMJwAMBzGXFLAoDl9jfz/CxiDksMPxHBA=="
 }
